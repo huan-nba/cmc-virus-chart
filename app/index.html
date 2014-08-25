@@ -8,11 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"/>
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/cmc-virus-chart.css">
   </head>
   <body>
+    <div class="container animated fadeInDown">
+      <div class="top-banner">
+        <!--<div class="img-round-small-glossy">-->
+        <div class="relative-container">
+          <img class="img-round-small" src="https://designcode.io/images/ui/cover.png">
+        </div>
+        <!--</div>-->
+        <!--<div class="space-md"></div>-->
+        <h1 class="header header-medium">Cmc-Infosec Virus Chart</h1>
+        <div class="space-xs"></div>
+        <h2 class="header header-light">Xin hãy đăng nhập vào hệ thống.</h2>
+        <div class="space-xs"></div>
+      </div>
+      <div class="bottom-container">
+        <div class="input">
+          <input id="username" type="text" placeholder="Tên tài khoản"/>
+
+        </div>
+        <div class="input">
+          <input id="password" type="password" placeholder="Mật khẩu"/>
+
+        </div>
+      </div>
+    </div>
     <script>
       window.CmcVirusChartENV = {{ENV}};
       window.EmberENV = window.CmcVirusChartENV.EmberENV;

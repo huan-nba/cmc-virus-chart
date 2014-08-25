@@ -27,5 +27,8 @@
     "express": "^4.1.1",
     "glob": "^3.2.9",
     "originate": "0.1.5"
+  },
+  "dependencies": {
+    "broccoli-autoprefixer": "^1.1.0"
   }
 }

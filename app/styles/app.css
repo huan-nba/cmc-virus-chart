@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
   margin: 20px;
   display: flex;
   height: 800px;
@@ -12,12 +12,12 @@ html, body {
   flex-direction: column;
   justify-content: center;
   background-color: black;
-  opacity: 1;
+  font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .container {
   display: flex;
-  flex-direction: orw;
+  flex-direction: column;
   justify-content: center;
   width: 305px;
   height: 432px;
@@ -25,7 +25,7 @@ html, body {
   margin: 0 auto;
   flex: 0 0 auto;
   border-radius: 7px;
-  overflow: hidden;
+  overflow: visible;
   background-color: #F5F5F7;
 }
 
@@ -34,13 +34,106 @@ html, body {
   background: linear-gradient(#F5F5F7, #E9E9EA) repeat scroll 0% 0% #F0F0F2;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #D3D3D4;
+  border-radius: 7px 7px 0 0;
   box-shadow: 0px 1px 0px #FFF;
+  flex: 1 1 0%;
 
-  flex: 1 1 auto;
+  /*Flex container*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .bottom-container {
   display: flex;
-  flex: 2.891891892 1 auto;
+  flex: 2.891891892 1 0%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+/*img*/
+.img-round-small {
+  background: none repeat scroll 0% 0% #FFF;
+  width: 64px;
+  height: 64px;
+  display: block;
+  border-radius: 32px;
+  margin: 0px;
+  padding: 0px;
+  /*position: absolute;*/
+  /*align-self: center;*/
+  position: relative;
+  top: -20px;
+
+}
+.relative-container {
+  flex: 7 0 0%;
+}
+.img-round-small-glossy:after {
+  /*background: url('/v3/images/icon-border.png') no-repeat scroll 0% 0% / 100% 100% transparent;*/
+  content: "";
+
+  width: 76px;
+  height: 75px;
+  background-color: transparent;
+  background-image: url('icon-border.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: 100% 100%;
+
+}
+.img-round-small-glossy {
+  align-self: center;
+  width: 76px;
+  height: 75px;
+  flex: 1 1 0%;
+}
+
+.header {
+
+  text-shadow: 0px 1px 0px #FFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /*line-height: 2.1em;*/
+  /*border: 1px solid;*/
+
+  margin: 0px;
+  padding: 0px;
+  flex: 2.2 0 0%;
+}
+
+.header-light {
+  color: #5B5B65;
+  font-size: 13px;
+  font-family: "HelveticaNeueMedium","HelveticaNeue-Medium","Helvetica Neue Medium","HelveticaNeue","Helvetica Neue",Helvetica,Arial;
+  font-weight: normal;
+  /*padding-bottom: 20px;*/
+  flex: 1.8 0 0%;
+
+}
+
+.header-medium {
+  color: #000;
+  font-size: 17px;
+  font-weight: bold;
+
+}
+
+
+
+
+/* Space class*/
+.space-md {
+  flex: 7 0 0%;
+  /*border: 1px dashed;*/
+}
+.space-xs {
+  flex: 1 0 0%;
+  /*border: 1px dashed;*/
 }
