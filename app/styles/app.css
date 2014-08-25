@@ -1,3 +1,46 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 20px;
+  display: flex;
+  height: 800px;
+  border: 1px solid;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: orw;
+  justify-content: center;
+  width: 305px;
+  height: 432px;
+  border: 1px solid;
+  margin: 0 auto;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: #F5F5F7;
+}
+
+
+.top-banner {
+  background: linear-gradient(#F5F5F7, #E9E9EA) repeat scroll 0% 0% #F0F0F2;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #D3D3D4;
+  box-shadow: 0px 1px 0px #FFF;
+
+  flex: 1 1 auto;
+}
+
+.bottom-container {
+  display: flex;
+  flex: 2.891891892 1 auto;
+
 }
