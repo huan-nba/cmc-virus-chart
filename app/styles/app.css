@@ -8,10 +8,11 @@ body {
   margin: 20px;
   display: flex;
   height: 800px;
-  border: 1px solid;
+  /*border: 1px dotted whitesmoke;*/
   flex-direction: column;
   justify-content: center;
-  background-color: black;
+  background-color: rgba(7, 5, 39, 0.89);
+  color: white;
   font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -21,11 +22,12 @@ body {
   justify-content: center;
   width: 305px;
   /*height: 432px;*/
-  border: 1px solid;
+  /*border: 1px solid;*/
   margin: 0 auto;
   flex: 0 0 auto;
   border-radius: 7px;
   overflow: visible;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.6);
   background-color: #F5F5F7;
 }
 
@@ -68,6 +70,7 @@ body {
   top: -25px;
   left: 0;
   right: 0;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.6);
 
 }
 .relative-container {
@@ -156,11 +159,16 @@ body {
   /*box-shadow: 0px 1px 1px rgba(124, 124, 127, 0.1) inset, 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 0px 4px rgba(86, 149, 219, 0);*/
 
   font-size: 15px;
-  padding: 0px 6px 2px 30px;
+  padding: 0px 6px 0px 30px;
   height: 37px;
   /*transition: border-color 0.15s linear 0s, box-shadow 0.15s linear 0s;*/
 }
-
+.input:focus {
+  border-color: rgba(55, 90, 134, 0.52);
+  outline: 0px none;
+  border-top: 1px solid;
+  box-shadow: 0px 1px 1px rgba(76, 107, 153, 0.15) inset, 0px 1px 0px rgba(255, 255, 255, 0), 0px 0px 8px #BDCAF2;
+}
 
 
 .button-primary {
@@ -225,10 +233,17 @@ body {
 }
 
 /* Background*/
-.bg-light-gray {
+.bgc-athens-gray2 {
   background-color: #F5F5F7;
 }
 
+/* Color */
+.c-kingfisher-daisy2 {
+  color: #35058a;
+}
+.c-waikawa-gray2 {
+  color: #535B98;
+}
 /* Icon */
 .icon-checkbox {
 
