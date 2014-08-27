@@ -1,24 +1,24 @@
-<div class="container animated fadeInDown">
+<section id="loginSection" {{bind-attr class=":container :width-login :animated presentLogin:fadeInDown isLoginFailed:shake"}}>
   <div class="top-banner">
 
     <div class="relative-container">
       <img class="img-round-small" src="https://designcode.io/images/ui/cover.png">
     </div>
 
-    <h1 class="c-kingfisher-daisy2 header header-medium">Cmc-Infosec Virus Chart</h1>
+    <h1 class="color-darkviolet2 header header-medium">Cmc-Infosec Virus Chart</h1>
     <h2 class="header header-light">Xin hãy đăng nhập vào hệ thống.</h2>
     <div class="space-xs"></div>
   </div>
-  <div class="bottom-container c-waikawa-gray2">
+  <form class="bottom-container color-darkblue2"{{action 'login' on='submit'}}>
     <div class="container-col-stretch width-75">
       <div class="container-row-stretch">
         <span class="absolute-left fa fa-user"></span>
         <!--<span class="absolute-left fa fa-spinner fa-spin"></span>-->
-        <input class="input border-light border-top-small" id="username" type="text" placeholder="Tên tài khoản"/>
+        {{input value=user class='input border-light border-top-small' placeholder='Tên tài khoản'}}
       </div>
       <div class="container-row-stretch">
         <span class="absolute-left fa fa-asterisk"></span>
-        <input class="input border-light border-bottom-small border-top-none" id="password" type="password" placeholder="Mật khẩu"/>
+        {{input value=pass class='input border-light border-bottom-small border-top-none' placeholder='Mật khẩu' type='password'}}
       </div>
     </div>
     <!--<div class="container-row-stretch width-75 ">-->
@@ -26,8 +26,9 @@
     <!--<input class="input border-light border-round-small" type="text" placeholder="Remember me" disabled/>-->
     <!--</div>-->
     <div class="submit width-75">
-      <button class="button-primary" {{action 'login'}}>Đăng Nhập</button>
-
+      <!--<button class="button-primary" {{action 'login'}}>Đăng Nhập</button>-->
+      <!--{{link-to 'Đăng nhập' 'virusinfo' tagName='button' class='button-primary'}}-->
+      {{input class='button-primary' type='submit' value='Đăng Nhập'}}
     </div>
-  </div>
-</div>
+  </form>
+</section>
