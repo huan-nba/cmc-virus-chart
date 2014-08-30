@@ -3,7 +3,8 @@
     "document": true,
     "window": true,
     "-Promise": true,
-    "CmcVirusChartENV": true
+    "CmcVirusChartENV": true,
+    "Chart": true
   },
   "browser" : true,
   "boss" : true,

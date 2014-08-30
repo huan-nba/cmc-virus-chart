@@ -1,34 +1,34 @@
-<section id="loginSection" {{bind-attr class=":container :width-login :animated presentLogin:fadeInDown isLoginFailed:shake"}}>
-  <div class="top-banner">
+<section id="loginSection" {{bind-attr class=":_container :_color-white :_width-login :animated presentLogin:fadeInDown isLoginFailed:shake"}}>
+  <div class="_top-banner">
 
-    <div class="relative-container">
-      <img class="img-round-small" src="https://designcode.io/images/ui/cover.png">
+    <div class="_relative-container">
+      <img class="_img-round-small" src="https://designcode.io/images/ui/cover.png">
     </div>
 
-    <h1 class="color-darkviolet2 header header-medium">Cmc-Infosec Virus Chart</h1>
-    <h2 class="header header-light">Xin hãy đăng nhập vào hệ thống.</h2>
-    <div class="space-xs"></div>
+    <h1 class="_color-darkviolet2 _header _header-medium">Cmc-Infosec Virus Chart</h1>
+    <h2 class="_header _header-light">Xin hãy đăng nhập vào hệ thống.</h2>
+    <div class="_space-xs"></div>
   </div>
-  <form class="bottom-container color-darkblue2"{{action 'login' on='submit'}}>
-    <div class="container-col-stretch width-75">
-      <div class="container-row-stretch">
-        <span class="absolute-left fa fa-user"></span>
+  <form class="_bottom-container _color-darkblue2"{{action 'login' on='submit'}}>
+    <div class="_container-col-stretch _width-75">
+      <div class="_container-row-stretch">
+        <span class="_absolute-left fa fa-user"></span>
         <!--<span class="absolute-left fa fa-spinner fa-spin"></span>-->
-        {{input value=user class='input border-light border-top-small' placeholder='Tên tài khoản'}}
+        {{input value=user class='_input _border-light _border-top-small' placeholder='Tên tài khoản'}}
       </div>
-      <div class="container-row-stretch">
-        <span class="absolute-left fa fa-asterisk"></span>
-        {{input value=pass class='input border-light border-bottom-small border-top-none' placeholder='Mật khẩu' type='password'}}
+      <div class="_container-row-stretch">
+        <span class="_absolute-left fa fa-asterisk"></span>
+        {{input value=pass class='_input _border-light _border-bottom-small _border-top-none' placeholder='Mật khẩu' type='password'}}
       </div>
     </div>
     <!--<div class="container-row-stretch width-75 ">-->
     <!--<span class="absolute-left icon-checkbox"></span>-->
-    <!--<input class="input border-light border-round-small" type="text" placeholder="Remember me" disabled/>-->
+    <!--<input class="input border-light _border-round-small  type="text" placeholder="Remember me" disabled/>-->
     <!--</div>-->
-    <div class="submit width-75">
+    <div class="_submit _width-75">
       <!--<button class="button-primary" {{action 'login'}}>Đăng Nhập</button>-->
-      <!--{{link-to 'Đăng nhập' 'virusinfo' tagName='button' class='button-primary'}}-->
-      {{input class='button-primary' type='submit' value='Đăng Nhập'}}
+      <!--{{link-to 'Đăng nhập' 'virusinfo' tagName='button' class='_button-primary'}}-->
+      {{input class='_button-primary' type='submit' value='Đăng Nhập'}}
     </div>
   </form>
 </section>

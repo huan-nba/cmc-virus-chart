@@ -5,7 +5,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('login');
+  this.route('login', {path: '/'});
+  this.route('login', {path: '/login'});
   this.route('user');
   this.route('virusinfo');
 //  this.route('authenticated');
