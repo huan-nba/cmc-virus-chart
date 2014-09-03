@@ -1,39 +1,59 @@
 import Ember from 'ember';
 export default Ember.Controller.extend({
+
   init: function () {
+    console.log('init login controller');
+    this.setProperties({
+      token: localStorage.token,
+    });
+    this.reset();
   },
+  reset: function () {
+    // reset animation
+    this.setProperties({
+      presentLogin: true,
+      isLoginFailed: false,
+      pendingTransition: 'virusinfo',
+      username: '',
+      password: '',
+    });
+  },
+  tokenChanged: function () {
+    localStorage.token = this.get('token');
+  }.observes('token'),
   actions: {
     login: function () {
       var self = this;
-      var user = this.get('user');
-      var pass = this.get('pass');
       this.set('presentLogin', false);
-      if (user === 'huan' && pass === '123') {
-        alert('correct');
-      }
-      else {
-        this.set('isLoginFailed', true);
-      }
 
-      Ember.$.post('http://192.168.225.101:8080/auth.json',
-        {username: 'huan', password: '1234'})
-        .then(function (res) {
-          self.set('errorMessage', res.message);
-          console.log(res.message);
-          if (res.success) {
+      /* authenticate with server and get a token back
+       * expected response data
+       * { token: 'somesortoftoken' }
+       */
+      var authData = this.getProperties('username', 'password');
+
+      Ember.$.post('http://192.168.225.101:8080/auth.json', authData)
+        .done(function (res) {
+//          console.dir(res);
+          if (res.token) {
             self.set('token', res.token);
+            self.transitionToRoute(self.get('pendingTransition'));
+          }
+        })
+        .fail(function (res) {
+          // fail in case of wrong credendial
+          if (res.status === 401) {
+            self.set('isLoginFailed', true);
+            Ember.$('#loginSection').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+              function () {
+                self.set('isLoginFailed', false);
+              });
+          }
+          else {
+            alert('Có lỗi hệ thống, hãy thử lại sau!');
           }
         });
     }
   },
 
-  token: localStorage.token,
-  tokenChanged: function () {
-    localStorage.token = this.get('token');
-  }.observes('token'),
-
-  presentLogin: true,
-  user: '',
-  pass: '',
-  isLoginFailed: false,
 });

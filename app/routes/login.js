@@ -1,6 +1,10 @@
-import AuthenticatedRoute from './authenticated';
-export default AuthenticatedRoute.extend({
-  model: function(){
-//    alert(this.get('hello'));
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  resetController: function (controller, isExiting) {
+    console.log('reset controller login');
+    if (isExiting) {
+      controller.reset();
+    }
   }
 });

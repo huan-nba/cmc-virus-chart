@@ -32,6 +32,7 @@ body, html {
   justify-content: center;
   /*height: 432px;*/
   /*border: 1px solid;*/
+  position:relative;
   margin: 0 auto;
   flex: 0 0 auto;
   border-radius: 7px;
@@ -56,7 +57,10 @@ body, html {
   justify-content: flex-end;
   align-items: center;
 }
+._chart-canvas {
+  margin: 0 auto;
 
+}
 ._bottom-container {
   display: flex;
   /*flex: 2.891891892 1 0%;*/
@@ -218,7 +222,9 @@ body, html {
 ._width-login {
   width: 305px;
 }
-
+._width-main {
+  width: 800px;
+}
 /* Border Style*/
 ._border-light {
   border-width: 1px;
