@@ -5,7 +5,9 @@
     "-Promise": true,
     "CmcVirusChartENV": true,
     "Chart": true,
-    "$": true
+    "$": true,
+    "_": true,
+    "Lazy": true
   },
   "browser" : true,
   "boss" : true,

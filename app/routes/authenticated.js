@@ -28,7 +28,9 @@ export default Ember.Route.extend({
       // The `error` hook is also provided the failed
       // `transition`, which can be stored and later
       // `.retry()`d if desired.
-      this.redirectToLogin(transition);
+      if (error.status === 401)
+        this.redirectToLogin(transition);
+      else alert('Server error!');
     },
     didTransition: function() {
       this.controllerFor('application').set('isLogin', false);
