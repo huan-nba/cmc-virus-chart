@@ -2,7 +2,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   init: function () {
-    console.log('init login controller');
     this.setProperties({
       token: localStorage.token,
     });

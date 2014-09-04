@@ -16,8 +16,16 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
-//app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
-//app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
+app.import('vendor/normalize.css/normalize.css');
+/*
+Partial Animate.css
+ */
+app.import('vendor/animate.css/source/_base.css');
+app.import('vendor/animate.css/source/attention_seekers/shake.css');
+app.import('vendor/animate.css/source/fading_entrances/fadeInDown.css');
+//app.import('vendor/animate.css/animate.css');
+app.import('vendor/font-awesome/css/font-awesome.css');
+app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
 app.import('vendor/bootstrap/dist/css/bootstrap.min.css');
 app.import('vendor/bootstrap/dist/css/bootstrap-theme.min.css');
 app.import('vendor/chartjs/Chart.js');

@@ -45,18 +45,12 @@ export default AuthenticatedRoute.extend({
   },
   model: function () {
     return this.get('preparedModel');
-
   },
   setupController: function (controller, model) {
     this._super(controller, model);
-    console.log('virus route setup controller');
     Ember.run.schedule('afterRender', this, function () {
       this.controller.drawChartOnTemplate();
     });
   },
 
-  renderTemplate: function(controller, model) {
-    this._super(controller, model);
-    console.log('rendering template onto virus info');
-  }
 });

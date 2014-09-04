@@ -3,14 +3,6 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
   init: function () {
     Chart.defaults.global.scaleIntegersOnly = true;
-    Chart.defaults.global.width
-    this.setProperties({
-//      serversData: [],
-//      topInfectedClients: [],
-//      topMalware: []
-      chartWidth: 750
-    });
-    console.log('init virusinfo controller');
   },
   drawBarChart: function (labels, data, chartId, options) {
     var chartData = {
@@ -42,10 +34,6 @@ export default Ember.ObjectController.extend({
     var numOfInfectedClients = serverInfectedClients.map(function (aServer) {
       return aServer.infected_clients;
     });
-    console.dir(serversData);
-    console.dir(serverInfectedClients);
-    console.dir(infectedServerNames);
-    console.dir(numOfInfectedClients);
     this.drawBarChart(infectedServerNames,
       numOfInfectedClients,
       'first-chart',

@@ -26,6 +26,17 @@ body, html {
   font-smoothing: antialiased;
 }
 
+._container-center {
+  background-color: white;
+  padding: 15px;
+  min-height: 1000px;
+  margin: 20px auto;
+}
+
+._center {
+  margin: 20px auto;
+}
+
 ._container {
   display: flex;
   flex-direction: column;
