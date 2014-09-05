@@ -1,0 +1,6 @@
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+//  serverUrl1: 'http://192.168.225.101:8080/'
+  serverUrl1: 'http://subnet2.noip.me:8080/'
+});

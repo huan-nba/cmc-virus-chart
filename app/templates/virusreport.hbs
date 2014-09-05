@@ -28,8 +28,9 @@
       Server {{currentServer.server}}  <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
+      <li {{bind-attr class="currentMonth::hidden"}} {{action 'selectAllServer'}}><a>All</a></li>
       {{#each currentMonth.servers}}
-        <li {{action 'selectServer' _view.contentIndex}}><a>{{this}}</a></li>
+        <li {{action 'selectServer' id}}><a>{{name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -39,8 +40,9 @@
       Virus {{currentVirus.virus}}<span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
+      <li {{bind-attr class="currentServer::hidden"}} {{action 'selectAllVirus'}}><a>All</a></li>
       {{#each currentServer.viruses}}
-        <li {{action 'selectVirus' _view.contentIndex}}><a>{{this}}</a></li>
+        <li {{action 'selectVirus' this}}><a>{{this}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -58,6 +60,9 @@
       <th>CPU</th>
       <th>Hệ Điều Hành</th>
       <th>IP</th>
+      <th>Tuần</th>
+      <th>Ngày</th>
+      <th>Giờ</th>
     </tr>
     {{#each currentVirus.clients}}
       <tr>
@@ -65,6 +70,28 @@
         <td>{{CPUName}}</td>
         <td>{{OSName}}</td>
         <td>{{IP}}</td>
+        <td>{{OnWeek}}</td>
+        <td>{{OnDay}}</td>
+        <td>{{OnHour}}</td>
+
+      </tr>
+    {{/each}}
+  </table>
+</div>
+<div {{bind-attr class="serverInfectedRatio::hidden :table-responsive"}}>
+  <table class="table table-striped table-bordered">
+    <tr>
+      <th>Server</th>
+      <th>Số Máy</th>
+      <th>Số Máy Nhiễm</th>
+      <th>Tỉ Lệ Nhiễm</th>
+    </tr>
+    {{#each serverInfectedRatio}}
+      <tr {{action 'selectServer' id}}>
+        <td>{{name}}</td>
+        <td>{{numOfClients}}</td>
+        <td>{{numOfInfectedClients}}</td>
+        <td>{{ratio}}</td>
       </tr>
     {{/each}}
   </table>

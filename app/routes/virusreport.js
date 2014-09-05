@@ -6,9 +6,9 @@ export default AuthenticatedRoute.extend({
     var token = this.controllerFor('login').get('token');
     var model = {};
     var self = this;
-
+    var serverUrl = this.controllerFor('application').get('serverUrl1');
     var promise = $.when(
-      $.post('http://192.168.225.101:8080/api/server-clients-count.json',
+      $.post(serverUrl+'api/server-clients-count.json',
         {token: token},
         function (res) {
           res.map(function (aServer) {
@@ -18,13 +18,13 @@ export default AuthenticatedRoute.extend({
           model.serversData = res;
         }
       ),
-      $.post('http://192.168.225.101:8080/api/get-clients.json',
+      $.post(serverUrl+'api/get-clients.json',
         {token: token},
         function (res) {
           model.clients = res;
         }
       ),
-      $.post('http://192.168.225.101:8080/api/all-infected-tables.json',
+      $.post(serverUrl+'api/all-infected-tables.json',
         {
           token: token
         },
@@ -50,7 +50,6 @@ export default AuthenticatedRoute.extend({
               });
             }
           });
-          model.currentYear = model.years[0];
         }
       )
     ).done(function () {
@@ -62,11 +61,9 @@ export default AuthenticatedRoute.extend({
   model: function () {
     return this.get('preparedModel');
   },
-//  setupController: function (controller, model) {
-//    this._super(controller, model);
-//    Ember.run.schedule('afterRender', this, function () {
-//      this.controller.drawChartOnTemplate();
-//    });
-//  },
+  setupController: function (controller, model) {
+    this._super(controller, model);
+    controller.set('currentYear', model.years[0]);
+  },
 
 });

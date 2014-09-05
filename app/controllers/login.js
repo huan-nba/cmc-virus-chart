@@ -30,8 +30,8 @@ export default Ember.Controller.extend({
        * { token: 'somesortoftoken' }
        */
       var authData = this.getProperties('username', 'password');
-
-      Ember.$.post('http://192.168.225.101:8080/auth.json', authData)
+      var serverUrl = this.get('controllers.application.serverUrl1');
+      Ember.$.post(serverUrl+'auth.json', authData)
         .done(function (res) {
 //          console.dir(res);
           if (res.token) {
@@ -54,5 +54,5 @@ export default Ember.Controller.extend({
         });
     }
   },
-
+  needs: ['application']
 });

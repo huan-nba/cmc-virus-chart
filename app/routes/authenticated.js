@@ -8,6 +8,7 @@ export default Ember.Route.extend({
     var token = this.controllerFor('login').get('token');
     if(!token) {
       this.redirectToLogin(transition);
+      console.log('redirecting');
     }
   },
   redirectToLogin: function (transition) {
@@ -28,9 +29,13 @@ export default Ember.Route.extend({
       // The `error` hook is also provided the failed
       // `transition`, which can be stored and later
       // `.retry()`d if desired.
-      if (error.status === 401)
+      if (error.status === 401) {
         this.redirectToLogin(transition);
-      else alert('Server error!');
+      }
+      else {
+        console.dir(error);
+        alert('Server error!');
+      }
     },
     didTransition: function() {
       this.controllerFor('application').set('isLogin', false);
