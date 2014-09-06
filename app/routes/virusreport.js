@@ -64,6 +64,6 @@ export default AuthenticatedRoute.extend({
   setupController: function (controller, model) {
     this._super(controller, model);
     controller.set('currentYear', model.years[0]);
-  },
+  }
 
 });

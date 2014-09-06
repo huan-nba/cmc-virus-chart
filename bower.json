@@ -16,6 +16,7 @@
     "font-awesome": "~4.2.0",
     "lodash": "~2.4.1",
     "breezejs": "~1.5.0",
-    "lazy.js": "~0.3.2"
+    "lazy.js": "~0.3.2",
+    "prefixfree": "*"
   }
 }

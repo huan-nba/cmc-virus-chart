@@ -22,22 +22,21 @@ var app = new EmberApp({
 // along with the exports of each module as its value.
 app.import('vendor/normalize.css/normalize.css');
 app.import('vendor/lazy.js/lazy.js');
-//app.import('vendor/breezejs/breeze.min.js');
 /*
 Partial Animate.css
  */
 app.import('vendor/animate.css/source/_base.css');
 app.import('vendor/animate.css/source/attention_seekers/shake.css');
 app.import('vendor/animate.css/source/fading_entrances/fadeInDown.css');
-//app.import('vendor/animate.css/animate.css');
+
 app.import('vendor/font-awesome/css/font-awesome.css');
 app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
 app.import('vendor/bootstrap/dist/css/bootstrap.min.css');
 app.import('vendor/bootstrap/dist/css/bootstrap-theme.min.css');
 app.import('vendor/chartjs/Chart.js');
-
+app.import('vendor/prefixfree/prefixfree.min.js');
 var tree = app.toTree();
-var autoprefixer = require('broccoli-autoprefixer');
-tree = autoprefixer(tree, null);
+//var autoprefixer = require('broccoli-autoprefixer');
+//tree = autoprefixer(tree, null);
 
 module.exports = tree;

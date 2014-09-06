@@ -40,5 +40,8 @@ export default Ember.Route.extend({
     didTransition: function() {
       this.controllerFor('application').set('isLogin', false);
     }
-  }
+  },
+  setupController: function (controller, model) {
+    this._super(controller, model);
+  },
 });
