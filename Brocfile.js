@@ -38,11 +38,11 @@ app.import('vendor/prefixfree/prefixfree.min.js');
 var tree = app.toTree();
 //var autoprefixer = require('broccoli-autoprefixer');
 //tree = autoprefixer(tree, null);
-var gzipFiles = require('broccoli-gzip');
-var tree = gzipFiles(tree, {
-  extensions: ['js', 'css'],
-  appendSuffix: false
-});
+//var gzipFiles = require('broccoli-gzip');
+//var tree = gzipFiles(tree, {
+//  extensions: ['js', 'css'],
+//  appendSuffix: false
+//});
 
 
 module.exports = tree;
