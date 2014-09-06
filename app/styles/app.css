@@ -19,10 +19,6 @@ body, html {
   justify-content: center;
   background-color: #28274D;
   font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
 
