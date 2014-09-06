@@ -40,7 +40,8 @@ var tree = app.toTree();
 //tree = autoprefixer(tree, null);
 var gzipFiles = require('broccoli-gzip');
 var tree = gzipFiles(tree, {
-  extensions: ['js', 'css']
+  extensions: ['js', 'css'],
+  appendSuffix: false
 });
 
 
