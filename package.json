@@ -30,5 +30,7 @@
     "express": "^4.8.5",
     "glob": "^4.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "broccoli-autoprefixer": "^1.1.0"
+  }
 }

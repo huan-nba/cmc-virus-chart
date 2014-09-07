@@ -13,7 +13,7 @@ var app = new EmberApp({
 //
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
-// object's keys should be the environment name and the values
+// object's ke.ys should be the environment name and the values
 // should be the asset to use in that environment.
 //
 // If the library that you are including contains AMD or ES6
@@ -34,10 +34,10 @@ app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
 app.import('vendor/bootstrap/dist/css/bootstrap.min.css');
 app.import('vendor/bootstrap/dist/css/bootstrap-theme.min.css');
 app.import('vendor/chartjs/Chart.js');
-app.import('vendor/prefixfree/prefixfree.min.js');
+//app.import('vendor/prefixfree/prefixfree.min.js');
 var tree = app.toTree();
-//var autoprefixer = require('broccoli-autoprefixer');
-//tree = autoprefixer(tree, null);
+var autoprefixer = require('broccoli-autoprefixer');
+tree = autoprefixer(tree, null);
 //var gzipFiles = require('broccoli-gzip');
 //var tree = gzipFiles(tree, {
 //  extensions: ['js', 'css'],
