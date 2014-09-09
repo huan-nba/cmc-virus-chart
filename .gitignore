@@ -10,7 +10,7 @@
 # dependencies
 /node_modules
 /bower_components/*
-/vendor
+
 # misc
 /.sass-cache
 /connect.lock
@@ -18,4 +18,3 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
-`
