@@ -49,9 +49,53 @@ export default Ember.ObjectController.extend({
   }.observes('currentServerID'),
 
   currentYearChanged: function () {
+    this.set('currentMonthID', 0);
     this.set('currentServerID', '');
     this.set('currentVirusname', '');
   }.observes('currentYear'),
+
+  currentMonthIDChanged: function () {
+    if (!this.get('currentYear')) {
+      this.set('currentMonthID', '');
+      return;
+    }
+    var self = this;
+    var serverUrl = this.get('controllers.application.serverUrl1');
+    var index = self.get('currentMonthID');
+    $.post(serverUrl+'api/infected-in-month-year.json',
+      {
+        token: this.get('controllers.login.token'),
+        month: this.get('currentYear').months[index],
+        year: this.get('currentYear').year
+      },
+      function (data) {
+        var serverIDs = new Ember.Set();
+        data.forEach(function (val) {
+          serverIDs.push(val.ServerID);
+        });
+        var servers = serverIDs.map(function (val) {
+          return {
+            name: self.model.serversData["'"+val+"'"].Name,
+            id: self.model.serversData["'"+val+"'"].ServerID
+          };
+        });
+
+        self.model.currentInfectedData = data;
+
+        var currentMonth = {};
+        currentMonth.month = self.get('currentYear').months[index];
+        currentMonth.servers = servers;
+
+
+        self.set('currentServer', {});
+        self.set('currentVirus', {});
+        self.set('currentMonth', currentMonth);
+        self.set('currentServerID', 'all');
+        self.set('currentVirusname', 'all');
+      }
+    );
+  }.observes('currentMonthID', 'currentYear'),
+
 
   currentVirusnameChanged: function () {
     var virusName = this.get('currentVirusname');
@@ -105,39 +149,7 @@ export default Ember.ObjectController.extend({
       this.set('currentYear', this.get('years')[index]);
     },
     selectMonth: function (index) {
-      var self = this;
-      var serverUrl = this.get('controllers.application.serverUrl1');
-      $.post(serverUrl+'api/infected-in-month-year.json',
-        {
-          token: this.get('controllers.login.token'),
-          month: this.get('currentYear').months[index],
-          year: this.get('currentYear').year
-        },
-        function (data) {
-          var serverIDs = new Ember.Set();
-          data.forEach(function (val) {
-            serverIDs.push(val.ServerID);
-          });
-          var servers = serverIDs.map(function (val) {
-            return {
-              name: self.model.serversData["'"+val+"'"].Name,
-              id: self.model.serversData["'"+val+"'"].ServerID
-            };
-          });
-
-          self.model.currentInfectedData = data;
-          
-          var currentMonth = {};
-          currentMonth.month = self.get('currentYear').months[index];
-          currentMonth.servers = servers;
-
-          self.set('currentMonth', currentMonth);
-          self.set('currentServer', {});
-          self.set('currentVirus', {});
-          self.set('currentServerID', '');
-          self.set('currentVirusname', '');
-        }
-      );
+      this.set('currentMonthID', index);
     },
     selectServer: function (serverID) {
       this.set('currentServerID', serverID);
