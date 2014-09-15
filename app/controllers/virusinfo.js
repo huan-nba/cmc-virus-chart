@@ -4,7 +4,19 @@ export default Ember.ObjectController.extend({
   init: function () {
     Chart.defaults.global.scaleIntegersOnly = true;
   },
-  drawBarChart: function (labels, data, chartId, options) {
+  servers: function () {
+    var serverInfectedClients = this.get('serverInfectedClients');
+    var servers = this.get('serversData').map(function (val, index) {
+      return $.extend(val, serverInfectedClients[index]);
+    });
+    return servers;
+  }.property('serversData', 'serverInfectedClients'),
+  drawChart: function (labels, data, chartId, options, chartType) {
+    var settings = {
+      scaleShowLabels : true,
+    };
+    $.extend(settings, options);
+
     var chartData = {
       labels: labels,
       datasets: [
@@ -17,9 +29,16 @@ export default Ember.ObjectController.extend({
         }
       ]
     };
-    new Chart(document.getElementById(chartId)
-      .getContext("2d"))
-      .Bar(chartData, options);
+    var context = new Chart(document.getElementById(chartId)
+      .getContext("2d"));
+    switch (chartType) {
+      case 'radar' :
+        context.Radar(chartData, settings);
+        break;
+      default :
+        context.Radar(chartData, settings);
+        break;
+    }
   },
   
   drawChartOnTemplate: function () {
@@ -34,7 +53,7 @@ export default Ember.ObjectController.extend({
     var numOfInfectedClients = serverInfectedClients.map(function (aServer) {
       return aServer.infected_clients;
     });
-    this.drawBarChart(infectedServerNames,
+    this.drawChart(infectedServerNames,
       numOfInfectedClients,
       'first-chart',
       {
@@ -54,7 +73,7 @@ export default Ember.ObjectController.extend({
       function (aClient) {
         return aClient.viruscount;
       });
-    this.drawBarChart(
+    this.drawChart(
       computerNames,
       virusCounts,
       'second-chart',
@@ -74,7 +93,7 @@ export default Ember.ObjectController.extend({
       function (aMalware) {
         return aMalware.infected_count;
       });
-    this.drawBarChart(
+    this.drawChart(
       virusNames,
       infectedCounts,
       'third-chart',

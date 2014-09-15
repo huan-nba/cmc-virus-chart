@@ -1,6 +1,6 @@
 <div class="_root-container">
   {{outlet login}}
-  <nav {{bind-attr class="isLogin:hidden :navbar :navbar-default :_width-main :_center" role=":navigation"}} >
+  <nav {{bind-attr class=":hidden isLogin:hidden :navbar :navbar-default :_width-main :_center" role=":navigation"}} >
     <div class="container _width-main ">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -27,7 +27,6 @@
         </ul>
       </div>
     </div>
-
   </nav>
   <div {{bind-attr class="isLogin:hidden :_container :_container-center :_width-main :animated :fadeInDown"}} >
     {{outlet main}}

@@ -15,24 +15,5 @@ var App = Ember.Application.extend({
 });
 
 loadInitializers(App, 'cmc-virus-chart');
-//
-//App.ApplicationAdapter = DS.FixtureAdapter;
-//
-//
-//App.User.FIXTURES = [
-//  {
-//    id: 1,
-//    name: 'Joe User',
-//    username: 'joe',
-//    email: 'joe@email.com',
-//    passwordDigest: '$2a$10$wJTPdvpGgzDvkXChrcPyqOQrFFawzGu89B1rZze/lVIcJKWiNeAqS'
-//  },
-//  {
-//    id: 2,
-//    name: 'John User',
-//    username: 'john',
-//    email: 'john smt',
-//    passwordDigest: '"$2a$10$wJTPdvpGgzDvkXChrcPyqOQrFFawzGu89B1rZze/lVIcJKWiNeAqS'
-//  }
-//];
+
 export default App;

@@ -6,14 +6,18 @@
       <th>Tên</th>
       <th>Mô tả</th>
       <th>Mac address</th>
-      <th>Số lượng máy trạm</th>
+      <th>IP</th>
+      <th>Số lượng máy</th>
+      <th>Số máy nhiễm virus</th>
     </tr>
-    {{#each serversData}}
+    {{#each servers}}
       <tr>
         <td>{{Name}}</td>
         <td>{{Description}}</td>
         <td>{{MACAddress}}</td>
+        <td>{{x-random 'ip'}}</td>
         <td>{{NumOfClients}}</td>
+        <td>{{infected_clients}}</td>
       </tr>
     {{/each}}
   </table>

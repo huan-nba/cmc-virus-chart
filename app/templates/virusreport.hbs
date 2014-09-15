@@ -1,5 +1,3 @@
-<!--<div class="hidden _container _width-main animated fadeInDown" style="background-color: white; padding: 15px; margin: 20px auto; ">-->
-  <!-- Single button -->
 <div class="row _center">
   <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -46,54 +44,179 @@
       {{/each}}
     </ul>
   </div>
-    <!--<li><a href="#">Action</a></li>-->
-      <!--<li><a href="#">Another action</a></li>-->
-      <!--<li><a href="#">Something else here</a></li>-->
-      <!--<li class="divider"></li>-->
-      <!--<li><a href="#">Separated link</a></li>-->
-</div>
-<p><span class="label label-default">Số lượng nhiễm: {{currentVirus.clients.length}} {{currentVirus.clients.length:máy}}</span></p>
-<div class="table-responsive">
-  <table class="table table-striped table-bordered">
-    <tr>
-      <th>Tên Máy</th>
-      <th>CPU</th>
-      <th>Hệ Điều Hành</th>
-      <th>IP</th>
-      <th>Tuần</th>
-      <th>Ngày</th>
-      <th>Giờ</th>
-    </tr>
-    {{#each currentVirus.clients}}
-      <tr>
-        <td>{{ComputerName}}</td>
-        <td>{{CPUName}}</td>
-        <td>{{OSName}}</td>
-        <td>{{IP}}</td>
-        <td>{{OnWeek}}</td>
-        <td>{{OnDay}}</td>
-        <td>{{OnHour}}</td>
 
-      </tr>
-    {{/each}}
-  </table>
 </div>
+<h4>Thống Kê Server&nbsp;<span class="label label-primary">{{currentServerName}}</span></h4>
+<h5>{{currentTime}}</h5>
 <div {{bind-attr class="serverInfectedRatio::hidden :table-responsive"}}>
-  <table class="table table-striped table-bordered">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
     <tr>
-      <th>Server</th>
-      <th>Số Máy</th>
-      <th>Số Máy Nhiễm</th>
-      <th>Tỉ Lệ Nhiễm</th>
+      {{#with serverInfectedRatio.__sorting__}}
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'name'}}>
+          Server
+          {{chevron-sort isAscending=ascending isVisible=name}}
+        </th>
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'description'}}>
+          Mô Tả
+          {{chevron-sort isAscending=ascending isVisible=description}}
+        </th>
+        {{!--<th {{action 'sortDataBy' 'serverInfectedRatio' 'ip'}}>--}}
+        <th>
+          IP
+          {{chevron-sort isAscending=ascending isVisible=ip}}
+        </th>
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'mac'}}>
+          MAC
+          {{chevron-sort isAscending=ascending isVisible=mac}}
+        </th>
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'numOfClients'}}>
+          Số Máy
+          {{chevron-sort isAscending=ascending isVisible=numOfClients}}
+        </th>
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'numOfInfectedClients'}}>
+          Số Máy Nhiễm
+          {{chevron-sort isAscending=ascending isVisible=numOfInfectedClients}}
+        </th>
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'ratio'}}>
+          Tỉ Lệ Nhiễm
+          {{chevron-sort isAscending=ascending isVisible=ratio}}
+        </th>
+      {{/with}}
     </tr>
+    </thead>
+    <tbody>
     {{#each serverInfectedRatio}}
       <tr {{action 'selectServer' id}}>
         <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{x-random 'ip'}}</td>
+        <td>{{mac}}</td>
         <td>{{numOfClients}}</td>
         <td>{{numOfInfectedClients}}</td>
-        <td>{{ratio}}</td>
+        <td>{{x-numeral ratio '0.00%'}}  {{ratioString}} </td>
       </tr>
     {{/each}}
+    </tbody>
   </table>
 </div>
-<!--</div>-->
+
+
+<h5 {{bind-attr class='currentRestrictedAreas::hidden'}}><span class="label label-default">Truy cập trái phép: {{currentServerRestrictedAreas.length}}</span></h5>
+{{!--<h5>Tổng Số Máy Nhiễm Virus: {{currentVirus.clients.length}} {{currentVirus.clients.length:máy}}</h5>--}}
+<div class="table-responsive">
+  <table id="virusreport-allserver" class="table table-striped table-bordered">
+    <thead>
+    <tr class="text-center">
+      {{#with currentRestrictedAreas.__sorting__}}
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'serverName'}}>
+          Server
+          {{chevron-sort isAscending=ascending isVisible=serverName}}
+        </th>
+        {{!--<th {{action 'sortDataBy' 'currentRestrictedAreas' 'clientDetail.GroupName'}}>--}}
+        <th>
+          Nhóm
+          {{!--{{chevron-sort isAscending=ascending isVisible=clientDetail.GroupName}}--}}
+        </th>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'CName'}}>
+          Tên Máy
+          {{chevron-sort isAscending=ascending isVisible=cName}}
+        </th>
+        {{!--<th {{action 'sortDataBy' 'currentRestrictedAreas' 'clientDetail.OSName'}}>--}}
+        <th>
+          Hệ Điều Hành
+          {{!--{{chevron-sort isAscending=ascending isVisible=clientDetail.OSName}}--}}
+        </th>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'PublicIP'}}>
+          IP
+          {{chevron-sort isAscending=ascending isVisible=publicIP}}
+        </th>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'LogStr'}}>
+          LogStr
+          {{chevron-sort isAscending=ascending isVisible=logStr}}
+        </th>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfected'}}>
+          Vi Phạm Đầu Tiên
+        </th>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfected'}}>
+          Thời Gian
+          {{chevron-sort isAscending=ascending isVisible=timeInfected}}
+        </th>
+
+      {{/with}}
+    </tr>
+    </thead>
+    <tbody>
+    {{#each currentServerRestrictedAreas}}
+      <tr class="text-left">
+        <td>{{serverName}}</td>
+        <td>{{clientDetail.GroupName}}</td>
+        <td>{{CName}}</td>
+        <td>{{clientDetail.OSName}}</td>
+        <td>{{PublicIP}}</td>
+        <td>{{LogStr}}</td>
+        <td class="text-center"><span {{bind-attr class="isFirstViolated::invisible :fa :fa-lg :fa-ban :_color-warning "}}></span></td>
+        <td class="text-center">{{timeInfected}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<h5><span class="label label-default">Tổng số máy nhiễm Virus: {{currentVirus.clients.length}}</span></h5>
+{{!--<h5>Tổng Số Máy Nhiễm Virus: {{currentVirus.clients.length}} {{currentVirus.clients.length:máy}}</h5>--}}
+<div class="table-responsive">
+  <table id="virusreport-allserver" class="table table-striped table-bordered">
+    <thead>
+    <tr class="text-center">
+      {{#with currentVirus.clients.__sorting__}}
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'serverName'}}>
+          Server
+          {{chevron-sort isAscending=ascending isVisible=serverName}}
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'GroupName'}}>
+          Nhóm
+          {{chevron-sort isAscending=ascending isVisible=groupName}}
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'ComputerName'}}>
+          Tên Máy
+          {{chevron-sort isAscending=ascending isVisible=computerName}}
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'OSName'}}>
+          Hệ Điều Hành
+          {{chevron-sort isAscending=ascending isVisible=oSName}}
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'IP'}}>
+          IP
+          {{chevron-sort isAscending=ascending isVisible=iP}}
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfected'}}>
+          Tuần/Ngày/Giờ Nhiễm &nbsp;&nbsp;
+          {{chevron-sort isAscending=ascending isVisible=timeInfected}}
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfected'}}>
+          Máy Nhiễm Đầu Tiên
+        </th>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'virusName'}}>
+          Tên Virus
+          {{chevron-sort isAscending=ascending isVisible=virusName}}
+        </th>
+      {{/with}}
+    </tr>
+    </thead>
+    <tbody>
+    {{#each currentVirus.clients}}
+      <tr class="text-left">
+        <td>{{serverName}}</td>
+        <td>{{GroupName}}</td>
+        <td>{{ComputerName}}</td>
+        <td>{{OSName}}</td>
+        <td>{{IP}}</td>
+        <td class="text-center">{{timeInfected}}</td>
+        <td class="text-center"><span {{bind-attr class="isFirstInfected::invisible :fa :fa-lg :fa-bug :_color-warning "}}></span></td>
+        <td>{{virusName}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>

@@ -19,12 +19,14 @@ export default AuthenticatedRoute.extend({
             res["'" + aServer.ServerID + "'"] = aServer;
             return aServer;
           });
+          console.dir(res);
           model.serversData = res;
         }
       ),
       $.post(serverUrl+'api/server-infected-clients-lastest.json',
         {token: token},
         function (res) {
+          console.dir(res);
           model.serverInfectedClients = res;
         }
       ),

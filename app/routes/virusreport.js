@@ -24,6 +24,18 @@ export default AuthenticatedRoute.extend({
           model.clients = res;
         }
       ),
+      $.post(serverUrl+'api/all-restrictedareas-tables.json',
+        {token: token},
+        function (res) {
+          model.restrictedYear = [];
+
+          res.forEach(function (row) {
+            var data = row.TABLE_NAME.split('_');
+            var year = data[1];
+            model.restrictedYear.push(year);
+          });
+          console.dir(model.restrictedYear);
+      }),
       $.post(serverUrl+'api/all-infected-tables.json',
         {
           token: token

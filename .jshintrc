@@ -7,7 +7,9 @@
     "Chart": true,
     "$": true,
     "_": true,
-    "Lazy": true
+    "Lazy": true,
+    "numeral": true,
+    "moment": true
   },
   "browser" : true,
   "boss" : true,

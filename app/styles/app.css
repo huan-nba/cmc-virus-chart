@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+/* begin boostrap ovveride
+ */
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #E1E1E1;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+}
+
+/* end boostrap ovveride
+ */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -20,6 +39,7 @@ body, html {
   background-color: #28274D;
   font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
   font-smoothing: antialiased;
+  margin: 30px;
 }
 
 ._container-center {
@@ -230,7 +250,7 @@ body, html {
   width: 305px;
 }
 ._width-main {
-  width: 800px;
+  min-width: 800px;
 }
 /* Border Style*/
 ._border-light {
@@ -263,6 +283,9 @@ border-image: none;
 }
 
 /* Color */
+._color-royalblue {
+  color: royalblue;
+}
 ._color-white {
   color: white;
 }
@@ -275,6 +298,9 @@ border-image: none;
   /*waikawa-gray2*/
 
   color: #535B98;
+}
+._color-warning {
+  color: firebrick;
 }
 /* Icon */
 ._icon-checkbox {
