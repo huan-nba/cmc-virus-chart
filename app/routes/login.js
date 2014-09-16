@@ -9,9 +9,5 @@ export default Ember.Route.extend({
   renderTemplate: function() {
     this.render({ outlet: 'login' });
   },
-  actions: {
-    didTransition: function() {
-      this.controllerFor('application').set('isLogin', true);
-    }
-  }
+
 });

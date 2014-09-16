@@ -109,14 +109,12 @@ export default Ember.ObjectController.extend({
           year: year
         },
         function (data) {
-          console.dir(data);
           data = data.map(function (val) {
             val.serverName = Lazy(self.model.serversData).find({ServerID: val.ServerID}).Name;
             val.clientDetail = Lazy(self.model.clients).find({ClientID: val.ClientID});
             val.timeInfected = moment({ year :year, month :parseInt(val.MonthVio)-1, day :val.DayVio}).format('L') + ' ' + numeral(val.TimeVio).format('00:00:00');
             val.isFirstViolated = false;
             return val;
-
           });
 
           data = data.sortBy('timeInfected');
@@ -182,7 +180,6 @@ export default Ember.ObjectController.extend({
     var currentInfected = this.model.currentInfectedData,
         serverID = this.get('currentServerID');
 
-
     var clientsData;
     if (virusName === 'all') {
       if (serverID === 'all') {
@@ -204,7 +201,9 @@ export default Ember.ObjectController.extend({
           .uniq('ClientID');
       }
     }
-    var clientsID = clientsData.map('ClientID').toArray();
+    var clientsID = clientsData.map('ClientID').toArray(),
+        year = this.get('currentYear').year,
+        month = this.get('currentMonth').month;
 
     //get all clients which has ClientID contained with clientsID
     var clients = [],
@@ -220,8 +219,9 @@ export default Ember.ObjectController.extend({
           clients[index].OnDay = data.OnDay;
           clients[index].OnHour = data.OnHour;
           clients[index].isFirstInfected = false;
+          clients[index].pathCRC64 = data.PathCRC64;
           clients[index].serverName = Lazy(self.model.serversData).find({ServerID: data.ServerID}).Name;
-          clients[index].timeInfected = '%@ / %@ / %@'.fmt(data.OnWeek, data.OnDay, data.OnHour);
+          clients[index].timeInfected = moment({year: year, month: parseInt(month)-1, week:data.OnWeek, day:data.OnDay, hour: data.OnHour, minute: data.OnMinute}).format('DD/MM/YYYY hh:mm:ss');
         }
       }
     });

@@ -1,4 +1,7 @@
 <div class="row _center">
+  {{link-to '' 'login' tagName='i' class='fa fa-2x fa-power-off pull-right fa-border'}}
+  {{link-to '' 'virusinfo' tagName='i' class='fa fa-2x fa-pie-chart pull-right fa-border'}}
+
   <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
       Năm {{currentYear.year}} <span class="caret"></span>
@@ -61,8 +64,7 @@
           Mô Tả
           {{chevron-sort isAscending=ascending isVisible=description}}
         </th>
-        {{!--<th {{action 'sortDataBy' 'serverInfectedRatio' 'ip'}}>--}}
-        <th>
+        <th {{action 'sortDataBy' 'serverInfectedRatio' 'ip'}}>
           IP
           {{chevron-sort isAscending=ascending isVisible=ip}}
         </th>
@@ -139,7 +141,7 @@
           Vi Phạm Đầu Tiên
         </th>
         <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfected'}}>
-          Thời Gian
+          Thời Gian Vi Phạm
           {{chevron-sort isAscending=ascending isVisible=timeInfected}}
         </th>
 
@@ -191,7 +193,7 @@
           {{chevron-sort isAscending=ascending isVisible=iP}}
         </th>
         <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfected'}}>
-          Tuần/Ngày/Giờ Nhiễm &nbsp;&nbsp;
+          Thời Gian Nhiễm &nbsp;&nbsp;
           {{chevron-sort isAscending=ascending isVisible=timeInfected}}
         </th>
         <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfected'}}>

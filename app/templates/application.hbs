@@ -1,34 +1,10 @@
-<div class="_root-container">
-  {{outlet login}}
-  <nav {{bind-attr class=":hidden isLogin:hidden :navbar :navbar-default :_width-main :_center" role=":navigation"}} >
-    <div class="container _width-main ">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        {{link-to 'CMC Virus Chart' 'virusinfo' class='navbar-brand'}}
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          {{#link-to 'virusinfo' tagName='li'}}<a>Biểu Đồ</a>{{/link-to}}
-          {{#link-to 'virusreport' tagName='li'}}<a>Báo Cáo</a>{{/link-to}}
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Huan <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li>{{link-to 'Đăng Xuất' 'login'}}</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div {{bind-attr class="isLogin:hidden :_container :_container-center :_width-main :animated :fadeInDown"}} >
+<div {{bind-attr class="virusinfo2:hidden :_root-container"}}>
+  <div {{bind-attr class="isLogin2:hidden :_container :_container-center :_width-main :animated :fadeInDown"}} >
     {{outlet main}}
   </div>
+  {{outlet login}}
+</div>
+
+<div {{bind-attr class="virusinfo2::hidden :container-fluid"}}>
+  {{outlet info}}
 </div>

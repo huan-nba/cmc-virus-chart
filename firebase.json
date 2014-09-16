@@ -12,18 +12,7 @@
       "key" : "Access-Control-Allow-Origin",
       "value" : "*"
     } ]
-  }, {
-    "source" : "**/*.@(js|css)",
-    "headers" : [ {
-      "key" : "Cache-Control",
-      "value" : "max-age=31000000"
-    } ]
-  }, {
-    "source" : "**/*.@(jpg|jpeg|gif|png|svg|ico)",
-    "headers" : [ {
-      "key" : "Cache-Control",
-      "value" : "max-age=2500000"
-    } ]
-  } ]
+  }
+  ]
 
 }

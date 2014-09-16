@@ -1,31 +1,23 @@
-  {{!--<h3>Số lượng Server: <span class="label label-primary">{{serversData.length}}</span></h3>--}}
-  <p><span class="label label-default">Số lượng Server: {{serversData.length}}</span></p>
-  <div class="table-responsive">
-  <table class="table table-striped table-bordered">
-    <tr>
-      <th>Tên</th>
-      <th>Mô tả</th>
-      <th>Mac address</th>
-      <th>IP</th>
-      <th>Số lượng máy</th>
-      <th>Số máy nhiễm virus</th>
-    </tr>
-    {{#each servers}}
-      <tr>
-        <td>{{Name}}</td>
-        <td>{{Description}}</td>
-        <td>{{MACAddress}}</td>
-        <td>{{x-random 'ip'}}</td>
-        <td>{{NumOfClients}}</td>
-        <td>{{infected_clients}}</td>
-      </tr>
-    {{/each}}
-  </table>
-  </div>
-  <h3><span class="label label-primary">Tình trạng máy nhiễm trên Server</span></h3>
-  <canvas id="first-chart" width="700" height="400" class="_chart-canvas"></canvas>
-  <h3><span class="label label-primary">Top 10 máy tính bi nhiễm virus nhiều nhất</span></h3>
-  <canvas id="second-chart" width="700" height="400" class="_chart-canvas"></canvas>
-  <h3><span class="label label-primary">Top 10 malware trong tháng</span></h3>
-  <canvas id="third-chart" width="700" height="400" class="_chart-canvas"></canvas>
+{{link-to '' 'login' tagName='i' class='fa fa-2x fa-inverse fa-power-off pull-right fa-border'}}
+{{link-to '' 'virusreport' tagName='i' class='fa fa-2x fa-inverse fa-file-text-o pull-right fa-border'}}
+<div class="row" style="margin: 0;">
+    <div class="col-md-12" >
+      <div class="row" style="margin: 0;">
+        <div class="col-md-6" style="padding: 0;">
+          <div id="chart-top-malware" class="chartdiv"></div>
+        </div>
+        <div class="col-md-6" style="padding: 0;">
+          <div id="chart-top-infectedclients" class="chartdiv"></div>
+        </div>
+      </div>
+      <div class="row" style="margin: 0;">
+        <div class="col-md-6" style="padding: 0;">
+          <div id="chart-server-status" class="chartdiv"></div>
+        </div>
+        <div class="col-md-6" style="padding: 0;">
+          <div id="chart-violating-clients" class="chartdiv"></div>
+        </div>
+      </div>
+    </div>
+</div>
 

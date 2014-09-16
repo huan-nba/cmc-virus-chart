@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('login', {path: '/login'});
   this.route('virusinfo');
   this.route('virusreport');
+  this.route('log');
 });
 
 export default Router;

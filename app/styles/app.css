@@ -4,6 +4,66 @@
   box-sizing: border-box;
 }
 
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(../fonts/lato-300-1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(../fonts/lato-300-2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato-400-1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato-400-2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/lato-700-1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/lato-700-2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/*
+AmCharts
+*/
+.chartdiv {
+  /*background: #28274D;*/
+  color:#ffffff;
+  min-width		: 675px;
+  height		: 590px;
+  font-size	: 13px;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+}
 /* begin boostrap ovveride
  */
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -26,7 +86,9 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #28274D;
+  margin-top: 10px;
+  background-color: #16272C;
+  /*background-color: #28274D;*/
 }
 
 ._root-container{
@@ -36,7 +98,7 @@ body, html {
   /*border: 1px dotted whitesmoke;*/
   flex-direction: column;
   justify-content: center;
-  background-color: #28274D;
+  /*background-color: #28274D;*/
   font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
   font-smoothing: antialiased;
   margin: 30px;
@@ -250,7 +312,7 @@ body, html {
   width: 305px;
 }
 ._width-main {
-  min-width: 800px;
+  min-width: 1800px;
 }
 /* Border Style*/
 ._border-light {
