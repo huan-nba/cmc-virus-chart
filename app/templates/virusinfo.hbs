@@ -1,3 +1,12 @@
+{{#if hlTitleVirus}}
+  <div id="headline" style="font-size: 16px;"  class="center-block headline headline-move-left">{{hlTitleVirus}} lúc <span class="_color-info">{{hlTime}}</span> - Virus: <b class="_color-warning2">{{hlVirusname}}</b> - Client: <b class="_color-info">{{hlClientname}}</b> - Server: <b class="_color-info">{{hlServername}}</b> - Nhóm: <b class="_color-info">{{hlGroupname}}</b></div>
+
+{{/if}}
+{{#if hlTitleViolation}}
+  <div id="headline" style="font-size: 16px;"  class="center-block headline headline-move-left">{{hlTitleViolation}} <span class="_color-info">{{hlLogStr}}</span> lúc <span class="_color-info">{{hlTime}}</span> - Client: <b class="_color-warning2">{{hlClientname}}</b> - Public IP: <b class="_color-info">{{hlIP}}</b> - Server: <b class="_color-info">{{hlServername}}</b> - Nhóm: <b class="_color-info">{{hlGroupname}}</b></div>
+
+{{/if}}
+
 {{link-to '' 'login' tagName='i' class='fa fa-2x fa-inverse fa-power-off pull-right fa-border'}}
 {{link-to '' 'virusreport' tagName='i' class='fa fa-2x fa-inverse fa-file-text-o pull-right fa-border'}}
 <div class="row" style="margin: 0;">

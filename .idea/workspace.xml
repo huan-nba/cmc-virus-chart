@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7016e716-4a5b-4613-81d2-f8b179a10c26" name="Default" comment="- move lato fonts locally&#10;- remove expire headers from firebase.json&#10;- use application currentRouteName to solve hidden element between routes&#10;- add realtimeUpdate support&#10;- add restricted areas to virusinfo chart&#10;- remove navbar&#10;- use Amcharts instead of chartjs&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/lato-300-1.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/lato-300-2.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/lato-400-1.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/lato-400-2.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/lato-700-1.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/lato-700-2.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unit/routes/log-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/log.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/log.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/virusreport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/views/virusreport-test.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="$PROJECT_DIR$/.jshintrc" />
+    <list default="true" id="7016e716-4a5b-4613-81d2-f8b179a10c26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brocfile.js" afterPath="$PROJECT_DIR$/Brocfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app.css" afterPath="$PROJECT_DIR$/app/styles/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/application.hbs" afterPath="$PROJECT_DIR$/app/templates/application.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application.js" afterPath="$PROJECT_DIR$/app/controllers/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/authenticated.js" afterPath="$PROJECT_DIR$/app/routes/authenticated.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firebase.json" afterPath="$PROJECT_DIR$/firebase.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/login.js" afterPath="$PROJECT_DIR$/app/routes/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router.js" afterPath="$PROJECT_DIR$/app/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/virusinfo.hbs" afterPath="$PROJECT_DIR$/app/templates/virusinfo.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/virusinfo.js" afterPath="$PROJECT_DIR$/app/controllers/virusinfo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/virusinfo.js" afterPath="$PROJECT_DIR$/app/routes/virusinfo.js" />
@@ -49,14 +32,14 @@
     <favorites_list name="cmc-virus-chart" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.4165055">
       <split-first>
         <leaf>
           <file leaf-file-name="Brocfile.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Brocfile.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="960">
-                  <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+                  <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -65,9 +48,14 @@
           <file leaf-file-name="application.hbs" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/templates/application.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
-                  <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-                  <folding />
+                <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+                  <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+                  <folding>
+                    <marker date="1410930847000" expanded="false" signature="41:52" placeholder="..." />
+                    <marker date="1410930847000" expanded="true" signature="123:348" placeholder="..." />
+                    <marker date="1410930847000" expanded="true" signature="189:322" placeholder="..." />
+                    <marker date="1410930847000" expanded="true" signature="355:439" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -75,8 +63,8 @@
           <file leaf-file-name="virusreport.hbs" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/templates/virusreport.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="3450">
-                  <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="91" />
+                <state vertical-scroll-proportion="-126.25" vertical-offset="0" max-vertical-offset="3435">
+                  <caret line="202" column="62" selection-start-line="202" selection-start-column="62" selection-end-line="202" selection-end-column="62" />
                   <folding />
                 </state>
               </provider>
@@ -85,26 +73,28 @@
           <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/styles/app.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.4230769" vertical-offset="2952" max-vertical-offset="6030">
-                  <caret line="201" column="26" selection-start-line="201" selection-start-column="26" selection-end-line="201" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="6570">
+                  <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="virusinfo.hbs" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="virusinfo.hbs" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/templates/virusinfo.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5116279" vertical-offset="0" max-vertical-offset="645">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.6906475" vertical-offset="0" max-vertical-offset="695">
+                  <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -114,33 +104,31 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="virusinfo.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="virusinfo.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/virusinfo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.8846154" vertical-offset="1340" max-vertical-offset="2025">
-                  <caret line="147" column="4" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
+                <state vertical-scroll-proportion="0.6998557" vertical-offset="2290" max-vertical-offset="3795">
+                  <caret line="185" column="74" selection-start-line="185" selection-start-column="74" selection-end-line="185" selection-end-column="74" />
                   <folding>
-                    <element signature="e#177#405#0" expanded="false" />
-                    <element signature="e#499#1561#0" expanded="false" />
-                    <marker date="1410866445000" expanded="false" signature="591:605" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="2012:2026" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="2109:2123" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="2199:2213" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="2273:2287" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="2345:2359" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="2436:2450" placeholder="..." />
-                    <marker date="1410866445000" expanded="true" signature="3001:3015" placeholder="..." />
-                    <marker date="1410866445000" expanded="true" signature="3098:3112" placeholder="..." />
-                    <marker date="1410866445000" expanded="true" signature="3182:3196" placeholder="..." />
-                    <marker date="1410866445000" expanded="true" signature="3263:3277" placeholder="..." />
-                    <marker date="1410866445000" expanded="true" signature="3349:3363" placeholder="..." />
-                    <marker date="1410866445000" expanded="true" signature="3427:3441" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="4342:4356" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="4433:4447" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="4517:4531" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="4598:4612" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="4672:4686" placeholder="..." />
-                    <marker date="1410866445000" expanded="false" signature="4744:4758" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="619:633" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2037:2051" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2134:2148" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2224:2238" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2298:2312" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2370:2384" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2461:2475" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="2971:2985" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="3068:3082" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="3152:3166" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="3233:3247" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="3319:3333" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="3397:3411" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="4070:4084" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="4161:4175" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="4245:4259" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="4326:4340" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="4400:4414" placeholder="..." />
+                    <marker date="1411072883000" expanded="false" signature="4472:4486" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -149,8 +137,8 @@
           <file leaf-file-name="virusinfo.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/routes/virusinfo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-21.153847" vertical-offset="1385" max-vertical-offset="2070">
-                  <caret line="129" column="3" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
+                <state vertical-scroll-proportion="-46.73077" vertical-offset="0" max-vertical-offset="2745">
+                  <caret line="81" column="22" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -166,16 +154,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="virusreport.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/controllers/virusreport.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="3849" max-vertical-offset="4560">
-                  <caret line="183" column="25" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/application.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -186,41 +164,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="environment.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/environment.js">
+          <file leaf-file-name="virusreport.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/virusreport.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-                  <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+                <state vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="4590">
+                  <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="authenticated.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/routes/authenticated.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="780">
-                  <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="virusreport.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="virusreport.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/routes/virusreport.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6373293" vertical-offset="540" max-vertical-offset="1290">
-                  <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".jshintrc" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.jshintrc">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-18.083334" vertical-offset="31" max-vertical-offset="690">
-                  <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1275">
+                  <caret line="64" column="7" selection-start-line="37" selection-start-column="5" selection-end-line="64" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -280,26 +238,26 @@
         <option value="$PROJECT_DIR$/bower_components/font-awesome/css/font-awesome.css" />
         <option value="$PROJECT_DIR$/.jshintrc" />
         <option value="$PROJECT_DIR$/bower_components/amcharts/dist/amcharts/amcharts.js" />
-        <option value="$PROJECT_DIR$/Brocfile.js" />
         <option value="$PROJECT_DIR$/app/routes/authenticated.js" />
-        <option value="$PROJECT_DIR$/app/templates/virusreport.hbs" />
         <option value="$PROJECT_DIR$/firebase.json" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/styles/app.css" />
-        <option value="$PROJECT_DIR$/app/controllers/virusreport.js" />
         <option value="$PROJECT_DIR$/app/views/virusinfo.js" />
-        <option value="$PROJECT_DIR$/app/templates/application.hbs" />
         <option value="$PROJECT_DIR$/app/routes/login.js" />
-        <option value="$PROJECT_DIR$/app/routes/virusinfo.js" />
-        <option value="$PROJECT_DIR$/app/routes/virusreport.js" />
-        <option value="$PROJECT_DIR$/app/controllers/application.js" />
-        <option value="$PROJECT_DIR$/app/controllers/virusinfo.js" />
+        <option value="$PROJECT_DIR$/Brocfile.js" />
+        <option value="$PROJECT_DIR$/app/templates/application.hbs" />
         <option value="$PROJECT_DIR$/app/templates/virusinfo.hbs" />
+        <option value="$PROJECT_DIR$/app/styles/app.css" />
+        <option value="$PROJECT_DIR$/app/templates/virusreport.hbs" />
+        <option value="$PROJECT_DIR$/app/routes/virusreport.js" />
+        <option value="$PROJECT_DIR$/app/controllers/virusreport.js" />
+        <option value="$PROJECT_DIR$/app/controllers/application.js" />
+        <option value="$PROJECT_DIR$/app/routes/virusinfo.js" />
+        <option value="$PROJECT_DIR$/app/controllers/virusinfo.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
+    <option name="x" value="1" />
     <option name="y" value="22" />
     <option name="width" value="1572" />
     <option name="height" value="1094" />
@@ -464,21 +422,21 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="120" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="75" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="121" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="75" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="122" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="76" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="553" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="503" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="159" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="128" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="159" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="127" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="161" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="129" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="437" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="345" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="stopIncompatibleRequiresConfirmation" value="true" />
@@ -514,6 +472,14 @@
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -524,12 +490,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -537,16 +505,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTraceType" factoryName="Spy-js" node="" config="" has-config="false" system-proxy="true" proxy-port="3546">
@@ -679,7 +637,11 @@
       <created>1410746944817</created>
       <updated>1410746944817</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="- move lato fonts locally&#10;- remove expire headers from firebase.json&#10;- use application currentRouteName to solve hidden element between routes&#10;- add realtimeUpdate support&#10;- add restricted areas to virusinfo chart&#10;- remove navbar&#10;- use Amcharts instead of chartjs&#10;">
+      <created>1410868254254</created>
+      <updated>1410868254254</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -703,29 +665,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="22" width="1572" height="1094" extended-state="0" />
+    <frame x="1" y="22" width="1572" height="1094" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29282868" sideWeight="0.49838814" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22808765" sideWeight="0.415216" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29282868" sideWeight="0.5016119" order="11" side_tool="true" content_ui="tabs" x="346" y="450" width="1227" height="238" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3545946" sideWeight="0.50105375" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2430279" sideWeight="0.415216" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2430279" sideWeight="0.58478403" order="11" side_tool="true" content_ui="tabs" x="346" y="450" width="1227" height="238" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35458168" sideWeight="0.50096714" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21727918" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22566086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25996014" sideWeight="0.49913943" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28299895" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23605578" sideWeight="0.58478403" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3565737" sideWeight="0.5460769" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247012" sideWeight="0.4986835" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247012" sideWeight="0.49838814" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="122" width="1720" height="894" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968128" sideWeight="0.4997367" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968128" sideWeight="0.4997367" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29282868" sideWeight="0.49838814" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32968128" sideWeight="0.4997367" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24941543" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="122" width="1720" height="894" />
@@ -745,9 +707,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21727918" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22566086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24941543" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3565737" sideWeight="0.5460769" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24941543" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -796,10 +758,36 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/styles/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="6555">
+          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/virusinfo.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="570">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testem.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
@@ -1033,22 +1021,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
           <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.062240664" vertical-offset="0" max-vertical-offset="723">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.jshintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.083334" vertical-offset="31" max-vertical-offset="690">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/authenticated.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8482549" vertical-offset="26" max-vertical-offset="780">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+        <state vertical-scroll-proportion="0.19794722" vertical-offset="0" max-vertical-offset="682">
           <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Brocfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/application.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="687">
-          <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1410930847000" expanded="false" signature="41:52" placeholder="..." />
+            <marker date="1410930847000" expanded="true" signature="123:348" placeholder="..." />
+            <marker date="1410930847000" expanded="true" signature="189:322" placeholder="..." />
+            <marker date="1410930847000" expanded="true" signature="355:439" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="6570">
+          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/virusreport.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-126.25" vertical-offset="0" max-vertical-offset="3435">
+          <caret line="202" column="62" selection-start-line="202" selection-start-column="62" selection-end-line="202" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1061,26 +1098,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/virusinfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.153847" vertical-offset="1385" max-vertical-offset="2070">
-          <caret line="129" column="3" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/virusreport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2304" max-vertical-offset="4560">
-          <caret line="183" column="25" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="25" />
+        <state vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="4590">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/authenticated.js">
+    <entry file="file://$PROJECT_DIR$/app/routes/virusreport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1275">
+          <caret line="64" column="7" selection-start-line="37" selection-start-column="5" selection-end-line="64" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1093,97 +1122,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Brocfile.js">
+    <entry file="file://$PROJECT_DIR$/app/routes/virusinfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="960">
-          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/virusreport.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="3450">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.062240664" vertical-offset="0" max-vertical-offset="723">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state vertical-scroll-proportion="-46.73077" vertical-offset="0" max-vertical-offset="2745">
+          <caret line="81" column="22" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/virusinfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8846154" vertical-offset="1340" max-vertical-offset="2025">
-          <caret line="147" column="4" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.6998557" vertical-offset="2290" max-vertical-offset="3795">
+          <caret line="185" column="74" selection-start-line="185" selection-start-column="74" selection-end-line="185" selection-end-column="74" />
           <folding>
-            <element signature="e#177#405#0" expanded="false" />
-            <element signature="e#499#1561#0" expanded="false" />
-            <marker date="1410866445000" expanded="false" signature="591:605" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="2012:2026" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="2109:2123" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="2199:2213" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="2273:2287" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="2345:2359" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="2436:2450" placeholder="..." />
-            <marker date="1410866445000" expanded="true" signature="3001:3015" placeholder="..." />
-            <marker date="1410866445000" expanded="true" signature="3098:3112" placeholder="..." />
-            <marker date="1410866445000" expanded="true" signature="3182:3196" placeholder="..." />
-            <marker date="1410866445000" expanded="true" signature="3263:3277" placeholder="..." />
-            <marker date="1410866445000" expanded="true" signature="3349:3363" placeholder="..." />
-            <marker date="1410866445000" expanded="true" signature="3427:3441" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="4342:4356" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="4433:4447" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="4517:4531" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="4598:4612" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="4672:4686" placeholder="..." />
-            <marker date="1410866445000" expanded="false" signature="4744:4758" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="619:633" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2037:2051" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2134:2148" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2224:2238" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2298:2312" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2370:2384" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2461:2475" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="2971:2985" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="3068:3082" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="3152:3166" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="3233:3247" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="3319:3333" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="3397:3411" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="4070:4084" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="4161:4175" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="4245:4259" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="4326:4340" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="4400:4414" placeholder="..." />
+            <marker date="1411072883000" expanded="false" signature="4472:4486" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.jshintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.083334" vertical-offset="31" max-vertical-offset="690">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4230769" vertical-offset="2952" max-vertical-offset="6030">
-          <caret line="201" column="26" selection-start-line="201" selection-start-column="26" selection-end-line="201" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/virusinfo.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5116279" vertical-offset="0" max-vertical-offset="645">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6906475" vertical-offset="0" max-vertical-offset="695">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/virusreport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6373293" vertical-offset="540" max-vertical-offset="1290">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>

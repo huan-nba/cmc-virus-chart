@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
   init: function () {
     Chart.defaults.global.scaleIntegersOnly = true;
+    this.lastUpdate = 1000;
   },
   servers: function () {
     var serverInfectedClients = this.get('serverInfectedClients');
@@ -48,7 +49,7 @@ export default Ember.ObjectController.extend({
     $.extend(settings, options);
 
     var chart = AmCharts.makeChart(chartID, settings);
-    this.set(chartID, chart);
+    this[chartID] = chart;
   },
   drawChartOnTemplate: function () {
 
@@ -77,7 +78,6 @@ export default Ember.ObjectController.extend({
 //    /*
 //    Draw second chart
 //     */
-    console.dir(this.get('model.topInfectedClients'));
     this.drawAmChart("chart-top-infectedclients",
       {
         "titles": [{
@@ -99,14 +99,6 @@ export default Ember.ObjectController.extend({
     /*
     Draw third chart
      */
-    var topMalware = this.get('model.topMalware');
-    var data3 = topMalware.map(function (aMalware, i) {
-      return {
-        virusName: aMalware.virusname.slice(0, 33),
-        infectedCount: aMalware.infected_count,
-        isPulled: i === 0
-      };
-    });
 
     this.drawAmChart("chart-top-malware",
       {
@@ -116,7 +108,7 @@ export default Ember.ObjectController.extend({
         }],
         "titleField": "virusName",
         "valueField": "infectedCount",
-        "dataProvider": data3
+        "dataProvider": this.get('model.topMalware')
       }
     );
 
@@ -144,30 +136,112 @@ export default Ember.ObjectController.extend({
 
     //Start Update Loop
 
-//    this.nearRealTimeUpdate(this);
+    this.nearRealTimeUpdate(this);
   },
   nearRealTimeUpdate: function (controller) {
-    var chart = controller.get('chart-top-malware');
-    var serverUrl = controller.get('controllers.application.serverUrl1');
-    var token = controller.get('controllers.login.token');
-    console.log('this getting print each 2000');
-    chart.animateAgain();
+    var chartTopClients = controller['chart-top-infectedclients'],
+        chartTopMalware = controller['chart-top-malware'],
+        chartServer = controller['chart-server-status'],
+        chartViolatingClients = controller['chart-violating-clients'],
+        serverUrl = controller.get('controllers.application.serverUrl1'),
+        token = controller.get('controllers.login.token');
 
     $.post(serverUrl+'api/server-status.json',
       {
         token: token
       },
       function (res) {
-        console.dir(res);
+        if (res.any(function (val) {
+          if (val.last_user_update && controller.lastUpdate &&
+            moment(val.last_user_update).valueOf() > moment(controller.lastUpdate).valueOf()) {
+            controller.lastUpdate = val.last_user_update;
+            return true;
+          } else {
+            return false;
+          }
+        })) {
+          controller.get('route').requestToServer(controller).done(function () {
+//            var violatingClientChanged = Ember.isEqual();
+            var oldViolation = controller.get('model').latestViolation,
+                newViolation = controller.get('preparedModel').latestViolation;
+
+            if (JSON.stringify(controller.get('model').topInfectedClients) !== JSON.stringify(controller.get('preparedModel').topInfectedClients)) {
+              chartTopClients.dataProvider = controller.get('preparedModel').topInfectedClients;
+              chartTopClients.validateData();
+              chartTopClients.animateAgain();
+            }
+
+            if (JSON.stringify(controller.get('model').topMalware) !== JSON.stringify(controller.get('preparedModel').topMalware)) {
+              chartTopMalware.dataProvider = controller.get('preparedModel').topMalware;
+              chartTopMalware.validateData();
+              chartTopMalware.animateAgain();
+            }
+
+            if (JSON.stringify(controller.get('model').serverInfectedRatio) !== JSON.stringify(controller.get('preparedModel').serverInfectedRatio)) {
+              chartServer.dataProvider = controller.get('preparedModel').serverInfectedRatio;
+              chartServer.validateData();
+              chartServer.animateAgain();
+            }
+
+            if (JSON.stringify(controller.get('model').violatingClients) !== JSON.stringify(controller.get('preparedModel').violatingClients)) {
+              chartViolatingClients.dataProvider = controller.get('preparedModel').violatingClients;
+              chartViolatingClients.validateData();
+              chartViolatingClients.animateAgain();
+            }
+
+
+
+            controller.set('model', controller.get('preparedModel'));
+            if (oldViolation.timeUnix !== newViolation.timeUnix) {
+              controller.setHeadline('violation');
+            } else {
+              controller.setHeadline('virus');
+            }
+
+
+            $('#headline').replaceWith($('#headline').clone(true));
+            console.log('fetched new data');
+
+          });
+        }
       })
       .always(function() {
-        console.log( "finished" );
         if('virusinfo' === controller.get('controllers.application.currentRouteName')) {
-          setTimeout(controller.nearRealTimeUpdate, 2000, controller);
+          setTimeout(controller.nearRealTimeUpdate, 5000, controller);
         }
       });
 
   },
-  needs: ['application', 'login']
+  setHeadline: function (type) {
+    var time = this.lastUpdate;
+    if (time) {
+      //prepare data for headline and save to LogController data
+      moment.locale('vi');
+      var latestViolation = this.get('latestViolation');
+      var latest1Infected = this.get('latest1Infected');
+      if (type === 'violation') {
+        this.setProperties({
+          hlTitleViolation: 'Phát hiện truy cập trái phép',
+          hlTime: moment(latestViolation.timeUnix).format('hh:mm:ss DD/MM'),
+//        hlMac: latestViolation.clientDetail.MACAddr,
+          hlClientname: latestViolation.CName,
+          hlIP: latestViolation.PublicIP,
+          hlLogStr: latestViolation.LogStr,
+          hlServername: latestViolation.serverName,
+          hlGroupname: latestViolation.clientDetail.GroupName,
+        });
+      } else {
+        this.setProperties({
+          hlTitleVirus: 'Phát hiện mã độc',
+          hlTime: moment(latest1Infected.timeUnix).format('hh:mm:ss DD/MM'),
+          hlVirusname: latest1Infected.VirusName,
+          hlClientname: latest1Infected.clientDetail.ComputerName,
+          hlServername: latest1Infected.serverName,
+          hlGroupname: latest1Infected.clientDetail.GroupName
+        });
+      }
+    }
+  },
+  needs: ['application', 'login', 'log']
 
 });

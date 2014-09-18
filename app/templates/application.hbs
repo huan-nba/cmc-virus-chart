@@ -1,10 +1,11 @@
-<div {{bind-attr class="virusinfo2:hidden :_root-container"}}>
-  <div {{bind-attr class="isLogin2:hidden :_container :_container-center :_width-main :animated :fadeInDown"}} >
+<h2 class="center-block headline" style="left: 55px;">HỆ THỐNG QUẢN LÝ THÔNG TIN CMC INTERNET SECURITY ENTERPRISE</h2>
+<div {{bind-attr class="isVirusinfo:hidden :_root-container"}}>
+  <div {{bind-attr class="isLogin:hidden :_container :_container-center :_width-main :animated :fadeInDown"}} >
     {{outlet main}}
   </div>
   {{outlet login}}
 </div>
 
-<div {{bind-attr class="virusinfo2::hidden :container-fluid"}}>
+<div {{bind-attr class="isVirusinfo::hidden :container-fluid"}}>
   {{outlet info}}
 </div>

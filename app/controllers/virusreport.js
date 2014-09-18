@@ -113,15 +113,16 @@ export default Ember.ObjectController.extend({
             val.serverName = Lazy(self.model.serversData).find({ServerID: val.ServerID}).Name;
             val.clientDetail = Lazy(self.model.clients).find({ClientID: val.ClientID});
             val.timeInfected = moment({ year :year, month :parseInt(val.MonthVio)-1, day :val.DayVio}).format('L') + ' ' + numeral(val.TimeVio).format('00:00:00');
+            val.timeInfectedUnix = moment({ year :year, month :parseInt(val.MonthVio)-1, day :val.DayVio}).valueOf() + numeral(val.TimeVio*1000);
             val.isFirstViolated = false;
             return val;
           });
 
-          data = data.sortBy('timeInfected');
+          data = data.sortBy('timeInfectedUnix');
           data[0].isFirstViolated = true;
           self.model.currentRestrictedAreas = data;
 
-          self.send('sortDataBy', 'currentRestrictedAreas', 'timeInfected');
+          self.send('sortDataBy', 'currentRestrictedAreas', 'timeInfectedUnix');
         }
       );
     }
@@ -222,12 +223,13 @@ export default Ember.ObjectController.extend({
           clients[index].pathCRC64 = data.PathCRC64;
           clients[index].serverName = Lazy(self.model.serversData).find({ServerID: data.ServerID}).Name;
           clients[index].timeInfected = moment({year: year, month: parseInt(month)-1, week:data.OnWeek, day:data.OnDay, hour: data.OnHour, minute: data.OnMinute}).format('DD/MM/YYYY hh:mm:ss');
+          clients[index].timeInfectedUnix = moment({year: year, month: parseInt(month)-1, week:data.OnWeek, day:data.OnDay, hour: data.OnHour, minute: data.OnMinute}).valueOf();
         }
       }
     });
 
     //set first infected flag on clients
-    clients = clients.sortBy('timeInfected');
+    clients = clients.sortBy('timeInfectedUnix');
     clients[0].isFirstInfected = true;
 
     var currentVirus = {};
@@ -235,7 +237,7 @@ export default Ember.ObjectController.extend({
     currentVirus.clients = clients;
     this.set('currentVirus', currentVirus);
 
-    this.send('sortDataBy', 'currentVirus.clients', 'timeInfected');
+    this.send('sortDataBy', 'currentVirus.clients', 'timeInfectedUnix');
   }.observes('currentVirusname'),
 
   actions: {

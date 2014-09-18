@@ -34,7 +34,6 @@ export default AuthenticatedRoute.extend({
             var year = data[1];
             model.restrictedYear.push(year);
           });
-          console.dir(model.restrictedYear);
       }),
       $.post(serverUrl+'api/all-infected-tables.json',
         {

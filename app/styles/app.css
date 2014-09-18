@@ -59,10 +59,30 @@ AmCharts
   /*background: #28274D;*/
   color:#ffffff;
   min-width		: 675px;
-  height		: 590px;
+  min-height		: 500px;
   font-size	: 13px;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 300;
+}
+/* headline text
+*/
+.headline {
+  color: #FFF;
+  width: 1200px;
+  overflow: hidden;
+  left: 80px;
+  white-space: nowrap;
+  position: relative;
+  font-family: lato;
+}
+.headline-move-left {
+  animation: move-left 15s;
+}
+
+/* Standard syntax */
+@keyframes move-left {
+  from {left: 1080px;}
+  to {left: 80px;}
 }
 /* begin boostrap ovveride
  */
@@ -82,12 +102,22 @@ AmCharts
 
 /* end boostrap ovveride
  */
-
-body, html {
+html {
+  overflow-x: hidden;
+  overflow-y: visible;
   margin: 0;
   padding: 0;
-  margin-top: 10px;
   background-color: #16272C;
+  width: 1920;
+  height: 1080px;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #16272C;
+  margin-top: 40px;
+
   /*background-color: #28274D;*/
 }
 
@@ -363,6 +393,12 @@ border-image: none;
 }
 ._color-warning {
   color: firebrick;
+}
+._color-warning2 {
+  color: #FF4343;
+}
+._color-info {
+  color: greenyellow;
 }
 /* Icon */
 ._icon-checkbox {

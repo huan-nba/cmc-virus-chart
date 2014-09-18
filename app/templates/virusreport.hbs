@@ -1,4 +1,4 @@
-<div class="row _center">
+<div class="row" style="margin: 20px;">
   {{link-to '' 'login' tagName='i' class='fa fa-2x fa-power-off pull-right fa-border'}}
   {{link-to '' 'virusinfo' tagName='i' class='fa fa-2x fa-pie-chart pull-right fa-border'}}
 
@@ -103,7 +103,6 @@
   </table>
 </div>
 
-
 <h5 {{bind-attr class='currentRestrictedAreas::hidden'}}><span class="label label-default">Truy cập trái phép: {{currentServerRestrictedAreas.length}}</span></h5>
 {{!--<h5>Tổng Số Máy Nhiễm Virus: {{currentVirus.clients.length}} {{currentVirus.clients.length:máy}}</h5>--}}
 <div class="table-responsive">
@@ -137,12 +136,12 @@
           LogStr
           {{chevron-sort isAscending=ascending isVisible=logStr}}
         </th>
-        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfected'}}>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfectedUnix'}}>
           Vi Phạm Đầu Tiên
         </th>
-        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfected'}}>
+        <th {{action 'sortDataBy' 'currentRestrictedAreas' 'timeInfectedUnix'}}>
           Thời Gian Vi Phạm
-          {{chevron-sort isAscending=ascending isVisible=timeInfected}}
+          {{chevron-sort isAscending=ascending isVisible=timeInfectedUnix}}
         </th>
 
       {{/with}}
@@ -192,11 +191,11 @@
           IP
           {{chevron-sort isAscending=ascending isVisible=iP}}
         </th>
-        <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfected'}}>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfectedUnix'}}>
           Thời Gian Nhiễm &nbsp;&nbsp;
-          {{chevron-sort isAscending=ascending isVisible=timeInfected}}
+          {{chevron-sort isAscending=ascending isVisible=timeInfectedUnix}}
         </th>
-        <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfected'}}>
+        <th {{action 'sortDataBy' 'currentVirus.clients' 'timeInfectedUnix'}}>
           Máy Nhiễm Đầu Tiên
         </th>
         <th {{action 'sortDataBy' 'currentVirus.clients' 'virusName'}}>
