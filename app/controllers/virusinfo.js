@@ -93,7 +93,7 @@ export default Ember.ObjectController.extend({
           "<br><span style='font-size:14px'><b>Nhóm:</b> [[groupName]]</span>" +
           "<br><span style='font-size:14px'><b>Hệ Điều Hành:</b> [[osname]]</span>" +
           "<br><span style='font-size:14px'><b>CPU:</b> [[cpuname]]</span>" +
-          "<br><span style='font-size:14px'><b>IP:</b> [[ip]]</span>",
+          "<br><span style='font-size:14px'><b>IP:</b> [[ipDotNotation]]</span>",
       }
     );
     /*

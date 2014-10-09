@@ -111,7 +111,7 @@ export default AuthenticatedRoute.extend({
           val.timeUnix = moment([tempYear, tempMonth - 1, (val.OnWeek - 1) * 7 + val.OnDay, val.OnHour, val.OnMinute]).valueOf();
         });
         model.infectedLatest = model.infectedLatest.sortBy('timeUnix');
-        model.latest1Infected = model.infectedLatest.get('lastObject');;
+        model.latest1Infected = model.infectedLatest.get('lastObject');
         // cook data for chart
         var violatingClients = Lazy(model.restrictedareas)
           .groupBy(function (val) {
@@ -149,7 +149,7 @@ export default AuthenticatedRoute.extend({
             ratio: parseFloat(numOfInfectedClients / val.NumOfClients),
             ratioPercent: numeral(parseFloat(numOfInfectedClients / val.NumOfClients)).format('0.00%'),
             mac: val.MACAddress,
-            ip: "192.168.1.???",
+            ip: val.IP,
             serverDescription: val.Description,
             isPulled: false
           };
@@ -157,14 +157,20 @@ export default AuthenticatedRoute.extend({
         serverInfectedRatio.sortBy('numOfInfectedClients');
         serverInfectedRatio[0].isPulled = true;
         model.serverInfectedRatio = serverInfectedRatio;
-
+        var num2dot = function(num) {
+          var d = num%256;
+          for (var i = 3; i > 0; i--) {
+            num = Math.floor(num/256);
+            d = d + '.' + num%256;}
+          return d;};
         model.topInfectedClients = model.topInfectedClients.map(function (val) {
           return $.extend(val,
             {
               computername: val.computername.slice(0, 33),
               serverName: Lazy(model.serversData).find({ServerID: val.serverid}).Name,
               groupName: Lazy(model.clients).find({ClientID: val.clientid}).GroupName,
-              isPulled: false
+              isPulled: false,
+              ipDotNotation: num2dot(val.ip)
             }
           );
         });

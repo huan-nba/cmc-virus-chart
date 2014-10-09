@@ -206,6 +206,14 @@ export default Ember.ObjectController.extend({
         year = this.get('currentYear').year,
         month = this.get('currentMonth').month;
 
+
+
+    var num2dot = function(num) {
+      var d = num%256;
+      for (var i = 3; i > 0; i--) {
+        num = Math.floor(num/256);
+        d = d + '.' + num%256;}
+      return d;};
     //get all clients which has ClientID contained with clientsID
     var clients = [],
         arrClientsData = clientsData.toArray();
@@ -221,6 +229,7 @@ export default Ember.ObjectController.extend({
           clients[index].OnHour = data.OnHour;
           clients[index].isFirstInfected = false;
           clients[index].pathCRC64 = data.PathCRC64;
+          clients[index].ipDotNotation = num2dot(clients[index].IP);
           clients[index].serverName = Lazy(self.model.serversData).find({ServerID: data.ServerID}).Name;
           clients[index].timeInfected = moment({year: year, month: parseInt(month)-1, week:data.OnWeek, day:data.OnDay, hour: data.OnHour, minute: data.OnMinute}).format('DD/MM/YYYY hh:mm:ss');
           clients[index].timeInfectedUnix = moment({year: year, month: parseInt(month)-1, week:data.OnWeek, day:data.OnDay, hour: data.OnHour, minute: data.OnMinute}).valueOf();

@@ -92,7 +92,7 @@
       <tr {{action 'selectServer' id}}>
         <td>{{name}}</td>
         <td>{{description}}</td>
-        <td>{{x-random 'ip'}}</td>
+        <td>{{ip}}</td>
         <td>{{mac}}</td>
         <td>{{numOfClients}}</td>
         <td>{{numOfInfectedClients}}</td>
@@ -212,7 +212,7 @@
         <td>{{GroupName}}</td>
         <td>{{ComputerName}}</td>
         <td>{{OSName}}</td>
-        <td>{{IP}}</td>
+        <td>{{ipDotNotation}}</td>
         <td class="text-center">{{timeInfected}}</td>
         <td class="text-center"><span {{bind-attr class="isFirstInfected::invisible :fa :fa-lg :fa-bug :_color-warning "}}></span></td>
         <td>{{virusName}}</td>

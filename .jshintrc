@@ -10,7 +10,8 @@
     "Lazy": true,
     "numeral": true,
     "moment": true,
-    "AmCharts": true
+    "AmCharts": true,
+    "require": true
   },
   "browser" : true,
   "boss" : true,
